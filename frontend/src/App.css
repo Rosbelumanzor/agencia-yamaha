@@ -1,0 +1,1272 @@
+/* ========================================
+   CONFIGURACION GENERAL
+======================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  border-left: 4px solid #e60012;
+  border-right: 4px solid #e60012;
+  min-height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 90px;
+  padding-top: 55px;
+  padding-bottom: 55px;
+}
+
+#motos {
+  background: #eeeeee;
+  border-top: 3px solid #e60012;
+}
+
+#servicios {
+  background: #ffffff;
+  border-top: 3px solid #e60012;
+}
+
+#cotizar {
+  background: #eeeeee;
+  border-top: 3px solid #e60012;
+}
+
+#pagos {
+  background: #ffffff;
+  border-top: 3px solid #e60012;
+}
+
+#contacto {
+  background: #0b0d0f;
+  border-top: 3px solid #e60012;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #161616;
+  border-left: 4px solid #e60012;
+  border-right: 4px solid #e60012;
+  min-height: 100vh;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+/* ========================================
+   NAVBAR
+======================================== */
+
+.navbar {
+  height: 78px;
+  background: #0b0d0f;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #292929;
+}
+
+
+/* LOGO */
+
+.logo {
+  width: 190px;
+  color: white;
+}
+
+.logo-yamaha {
+  color: #e60012;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.logo small {
+  display: block;
+  color: white;
+  font-size: 11px;
+  font-style: italic;
+  margin-left: 20px;
+}
+
+
+/* MENU */
+
+.navbar nav {
+  display: flex;
+  gap: 38px;
+}
+
+.navbar nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  position: relative;
+  padding: 8px 0;
+  transition: 0.3s;
+}
+
+.navbar nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #e60012;
+  transition: width 0.3s ease;
+}
+
+.navbar nav a:hover {
+  color: #e60012;
+}
+
+.navbar nav a:hover::after {
+  width: 100%;
+}
+
+/* BOTONES NAVBAR */
+
+.navbar-buttons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.btn-pagos-superior {
+  background: transparent;
+  color: white;
+  border: 1px solid #777;
+  padding: 11px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-pagos-superior:hover {
+  background: #e60012;
+  border-color: #e60012;
+}
+
+.btn-cotizar {
+  background: #e60012;
+  color: white;
+  border: 1px solid #e60012;
+  padding: 11px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-cotizar:hover {
+  background: #b8000e;
+}
+
+.btn-carrito {
+  background: #e60012;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.btn-carrito:hover {
+  background: #b8000e;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(230, 0, 18, 0.3);
+}
+
+.btn-carrito:active {
+  transform: translateY(0);
+}
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+  min-height: 570px;
+  background:
+    linear-gradient(
+      90deg,
+      #080a0c 0%,
+      #101214 50%,
+      #25282b 100%
+    );
+
+  color: rgb(217, 217, 229);
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 80px 8%;
+}
+
+.hero-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 28px;
+}
+
+.hero-logo img {
+  width: 55px;
+  height: auto;
+  object-fit: contain;
+}
+
+.hero-logo span {
+  color:#ed1c24;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.moto-placeholder img {
+  width: 180px;
+  max-width: 70%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* EFECTO DECORATIVO */
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 550px;
+  height: 550px;
+  border: 80px solid rgba(230, 0, 18, 0.08);
+  border-radius: 50%;
+  right: -180px;
+  top: 20px;
+}
+
+
+/* TEXTO HERO */
+
+.hero-content {
+  width: 55%;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content > span {
+  color: #e60012;
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-size: 14px;
+}
+
+.hero-content h1 {
+  font-size: 68px;
+
+  line-height: 1.05;
+
+  font-weight: 800;
+
+  letter-spacing: -2px;
+
+  margin: 0 0 25px;
+
+  color: #ffffff;
+}
+
+.hero-content p {
+  max-width: 650px;
+
+  font-size: 18px;
+
+  line-height: 1.8;
+
+  color: #d0d0d0;
+
+  margin-bottom: 35px;
+}
+
+
+/* MOTO HERO */
+
+.hero-moto {
+  width: 45%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.moto-placeholder {
+  width: 390px;
+  height: 250px;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle,
+      #3b3b3b,
+      #171717 60%,
+      transparent 65%
+    );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #e60012;
+  font-size: 55px;
+  font-weight: 900;
+  transform: rotate(-8deg);
+}
+
+
+/* BOTON PRINCIPAL */
+
+.btn-principal {
+  margin-top: 25px;
+  background: #e60012;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-principal:hover {
+  background: white;
+  color: #111;
+}
+
+
+/* ========================================
+   TITULOS
+======================================== */
+
+.titulo-seccion {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 55px;
+}
+
+.titulo-seccion span {
+  color: #e60012;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.titulo-seccion h2 {
+  font-size: 40px;
+  margin: 12px 0;
+}
+
+.titulo-seccion p {
+  color: #777;
+  line-height: 1.6;
+}
+
+
+/* ========================================
+   MOTOS
+======================================== */
+
+.motos {
+  background: white;
+  padding: 90px 8%;
+}
+
+.moto-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1150px;
+  margin: auto;
+}
+
+.moto-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e4e4e4;
+  transition: 0.3s;
+}
+
+.moto-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+
+/* IMAGEN MOTO */
+
+.moto-imagen {
+  height: 230px;
+  background:
+    linear-gradient(
+      135deg,
+      #191919,
+      #303030
+    );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.moto-imagen span {
+  color: white;
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+
+/* INFO MOTO */
+
+.moto-info {
+  padding: 25px;
+}
+
+.moto-info h3 {
+  font-size: 22px;
+  margin: 0 0 8px;
+}
+
+.moto-info p {
+  color: #777;
+}
+
+.moto-info strong {
+  display: block;
+  color: #e60012;
+  font-size: 23px;
+  margin: 18px 0;
+}
+
+.moto-info button {
+  background: #111;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.moto-info button:hover {
+  background: #e60012;
+}
+
+
+/* ========================================
+   SERVICIOS
+======================================== */
+
+.servicios {
+  background: #f3f3f3;
+  padding: 90px 8%;
+}
+
+.servicios-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.servicio {
+  background: white;
+  padding: 35px;
+  border-radius: 7px;
+  border-top: 4px solid #e60012;
+}
+
+.servicio-icono {
+  color: #e60012;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.servicio h3 {
+  font-size: 21px;
+}
+
+.servicio p {
+  color: #777;
+  line-height: 1.6;
+}
+
+/* ========================================
+   COTIZACION
+======================================== */
+
+.cotizacion {
+  background: #f4f6f8;
+  padding: 100px 6%;
+}
+
+.cotizacion .titulo-seccion {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+.cotizacion .titulo-seccion span {
+  color: #e60012;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.cotizacion .titulo-seccion h2 {
+  font-size: 40px;
+  margin: 12px 0;
+}
+
+.cotizacion .titulo-seccion p {
+  color: #777;
+  line-height: 1.6;
+}
+
+
+/* CONTENEDOR */
+
+.cotizacion-contenedor {
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 35% 65%;
+
+  background: white;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ========================================
+   INFORMACION IZQUIERDA
+======================================== */
+
+.cotizacion-info {
+  background: #151719;
+  color: white;
+
+  padding: 55px 40px;
+}
+
+.cotizacion-info h3 {
+  font-size: 28px;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.beneficio {
+  display: flex;
+  gap: 15px;
+
+  margin-bottom: 30px;
+}
+
+.beneficio-icono {
+  min-width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #e60012;
+
+  border-radius: 50%;
+
+  color: white;
+
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.beneficio h4 {
+  margin: 0 0 6px;
+
+  font-size: 16px;
+}
+
+.beneficio p {
+  margin: 0;
+
+  color: #bcbcbc;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* ========================================
+   FORMULARIO
+======================================== */
+
+.formulario-cotizacion {
+  padding: 50px;
+
+  background: white;
+
+  display: block;
+
+  width: 100%;
+}
+
+
+/* TITULO DEL FORMULARIO */
+
+.formulario-header {
+  margin-bottom: 25px;
+}
+
+.formulario-header span {
+  color: #e60012;
+
+  font-size: 12px;
+
+  font-weight: bold;
+
+  letter-spacing: 2px;
+}
+
+.formulario-header h3 {
+  margin: 7px 0;
+
+  font-size: 23px;
+
+  color: #151719;
+}
+
+.formulario-header p {
+  margin: 0;
+
+  color: #777;
+
+  font-size: 14px;
+}
+
+
+/* ========================================
+   CAMPOS
+======================================== */
+
+.form-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+
+  width: 100%;
+
+  margin-bottom: 20px;
+}
+
+.campo {
+  display: block;
+
+  width: 100%;
+
+  margin-bottom: 20px;
+}
+
+.campo label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #252525;
+
+  font-size: 14px;
+
+  font-weight: bold;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  display: block;
+
+  width: 100%;
+
+  padding: 14px 16px;
+
+  border: 1px solid #d8dde2;
+
+  border-radius: 7px;
+
+  background: #fff;
+
+  color: #222;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition: 0.25s;
+}
+
+
+/* EFECTO AL SELECCIONAR */
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  border-color: #e60012;
+
+  box-shadow:
+    0 0 0 3px rgba(230, 0, 18, 0.08);
+}
+
+
+/* PLACEHOLDER */
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+  color: #9a9a9a;
+}
+
+
+/* SELECT */
+
+.campo select {
+  cursor: pointer;
+}
+
+
+/* MENSAJE */
+
+.campo textarea {
+  min-height: 130px;
+
+  resize: vertical;
+}
+
+
+/* ========================================
+   SECCION DE MOTOCICLETA
+======================================== */
+
+.moto-header {
+  margin-top: 35px;
+
+  padding-top: 30px;
+
+  border-top: 1px solid #eeeeee;
+}
+
+
+/* ========================================
+   BOTON
+======================================== */
+
+.btn-enviar {
+  width: 100%;
+
+  padding: 16px;
+
+  margin-top: 5px;
+
+  background: #e60012;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 7px;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  transition: 0.25s;
+}
+
+.btn-enviar:hover {
+  background: #c4000f;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 18px rgba(230, 0, 18, 0.2);
+}
+
+
+/* ========================================
+   METODOS DE PAGO
+======================================== */
+
+.pagos {
+  background: white;
+  padding: 100px 8%;
+}
+
+.pagos-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.pago-card {
+  background: #fafafa;
+  border: 1px solid #e5e5e5;
+  padding: 35px 25px;
+  text-align: center;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.pago-card:hover {
+  transform: translateY(-5px);
+  border-color: #e60012;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.pago-icono {
+  width: 60px;
+  height: 60px;
+  background: #111;
+  color: white;
+  border-radius: 50%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.pago-card h3 {
+  margin-top: 20px;
+}
+
+.pago-card p {
+  color: #777;
+  line-height: 1.5;
+}
+
+
+/* ========================================
+   CONTACTO
+======================================== */
+
+.contacto {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 90px 20px;
+}
+
+.contacto span {
+  color: #e60012;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.contacto h2 {
+  font-size: 40px;
+  margin: 15px 0;
+}
+
+.contacto p {
+  color: #aaa;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+  background: #080808;
+  color: #777;
+  text-align: center;
+  padding: 30px;
+}
+
+.footer-logo {
+  color: #e60012;
+  font-size: 25px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 950px) {
+
+  .navbar nav {
+    display: none;
+  }
+
+  .hero {
+    padding: 70px 30px;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero-moto {
+    display: none;
+  }
+
+  .moto-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .servicios-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cotizacion-contenedor {
+    grid-template-columns: 1fr;
+  }
+
+  .pagos-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .logo {
+    width: auto;
+  }
+
+  .navbar-buttons {
+    gap: 5px;
+  }
+
+  .btn-pagos-superior {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 43px;
+  }
+
+  .moto-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .formulario-cotizacion {
+    padding: 30px 20px;
+  }
+
+  .cotizacion-info {
+    padding: 35px 25px;
+  }
+
+  .pagos-grid {
+    grid-template-columns: 1fr;
+  }
+
+/* ========================================
+   LOGO YAMAHA - HERO
+======================================== */
+
+.hero-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  margin-bottom: 28px;
+}
+
+.hero-logo img {
+  width: 42px;
+  height: 42px;
+
+  color: #ed1c24;
+}
+
+.hero-logo span {
+  color: #ed1c24;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+
+/* LOGO GRANDE */
+
+.hero-logo-grande {
+  position: relative;
+
+  width: 320px;
+  height: 320px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #17191b;
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.45);
+}
+
+.hero-logo-grande img {
+  width: 125px;
+  height: 125px;
+
+  color: #ed1c24;
+
+  margin-bottom: 18px;
+}
+
+.hero-logo-grande strong {
+  color: #ed1c24;
+
+  font-size: 34px;
+
+  letter-spacing: 5px;
+
+  font-weight: 800;
+}
+
+/* ===== CARRITO YAMAHA ===== */
+
+.carrito-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  display: flex;
+  justify-content: flex-end;
+  background: rgba(0, 0, 0, 0.72);
+}
+
+.carrito-panel {
+  width: 100%;
+  max-width: 440px;
+  height: 100vh;
+  background: #f5f5f5;
+  color: #161616;
+  display: flex;
+  flex-direction: column;
+  border-left: 4px solid #e60012;
+  box-shadow: -8px 0 25px rgba(0, 0, 0, 0.3);
+  animation: carritoEntrada 0.3s ease;
+}
+
+.carrito-header {
+  background: #0b0d0f;
+  color: #ffffff;
+  padding: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid #e60012;
+}
+
+.carrito-header span {
+  color: #e60012;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.carrito-header h2 {
+  margin: 7px 0 0;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+.carrito-cerrar {
+  background: #e60012;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  width: 38px;
+  height: 38px;
+  font-size: 25px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.carrito-cerrar:hover {
+  background: #b8000e;
+}
+
+.carrito-contenido {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.carrito-item {
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-left: 4px solid #e60012;
+  border-radius: 7px;
+  padding: 18px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+.carrito-item h3 {
+  margin: 0 0 8px;
+  color: #111111;
+  font-size: 17px;
+}
+
+.carrito-item p {
+  margin: 0 0 10px;
+  color: #666666;
+  font-size: 13px;
+}
+
+.carrito-item strong {
+  display: block;
+  color: #e60012;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.btn-eliminar-carrito {
+  background: #ffffff;
+  color: #e60012;
+  border: 1px solid #e60012;
+  border-radius: 5px;
+  padding: 9px 15px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-eliminar-carrito:hover {
+  background: #e60012;
+  color: #ffffff;
+}
+
+.carrito-vacio {
+  text-align: center;
+  padding: 45px 15px;
+  background: #ffffff;
+  border: 1px dashed #cccccc;
+  border-radius: 7px;
+}
+
+.carrito-vacio h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.carrito-vacio p {
+  color: #666666;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@keyframes carritoEntrada {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .carrito-panel {
+    max-width: 100%;
+  }
+
+  .carrito-header {
+    padding: 18px;
+  }
+
+  .carrito-contenido {
+    padding: 14px;
+  }
+
+  .carrito-item {
+    padding: 14px;
+  }
+
+  .carrito-overlay {
+    background: rgba(255, 0, 0, 0.8) !important;
+}
+
+  .carrito-panel {
+    background: red !important;
+    width: 440px !important;
+    max-width: 100% !important;
+    border: 5px solid yellow !important;
+}
+
+}
+
+}

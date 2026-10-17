@@ -1,0 +1,241 @@
+
+.login-pagina {
+  min-height: 100vh;
+  display: flex;
+  background: #f3f3f3;
+  color: #171717;
+  font-family: Arial, sans-serif;
+}
+
+.login-lateral {
+  width: 42%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 35px 45px;
+  background: #101113;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-lateral::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border: 35px solid rgba(230, 0, 18, 0.12);
+  border-radius: 50%;
+  right: -150px;
+  bottom: 80px;
+}
+
+.login-volver {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  position: relative;
+  z-index: 1;
+}
+
+.login-volver:hover {
+  color: #ff1b2d;
+}
+
+.login-marca {
+  position: relative;
+  z-index: 1;
+  margin: auto 0;
+}
+
+.login-linea {
+  display: block;
+  width: 55px;
+  height: 5px;
+  background: #e60012;
+  margin-bottom: 20px;
+}
+
+.login-marca > p:first-of-type {
+  color: #bdbdbd;
+  letter-spacing: 4px;
+  font-size: 12px;
+}
+
+.login-marca h1 {
+  font-size: clamp(48px, 7vw, 85px);
+  font-weight: 900;
+  font-style: italic;
+  margin: 10px 0;
+  letter-spacing: 3px;
+}
+
+.login-marca h2 {
+  color: #e60012;
+  font-size: 20px;
+  margin-top: 0;
+}
+
+.login-descripcion {
+  max-width: 320px;
+  color: #c5c5c5;
+  line-height: 1.7;
+  margin-top: 30px;
+}
+
+.login-pie {
+  color: #999;
+  font-size: 10px;
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 1;
+}
+
+.login-contenedor {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 35px 25px;
+  box-sizing: border-box;
+}
+
+.login-tarjeta {
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  padding: 38px;
+  border-radius: 12px;
+  box-sizing: border-box;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+.login-icono {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e60012;
+  color: white;
+  font-size: 27px;
+  font-weight: bold;
+  font-style: italic;
+  border-radius: 8px;
+  margin-bottom: 28px;
+}
+
+.login-etiqueta {
+  color: #e60012;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.login-tarjeta h2 {
+  font-size: 29px;
+  margin: 10px 0;
+}
+
+.login-subtitulo {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.login-tarjeta form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-tarjeta label {
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 9px;
+}
+
+.login-tarjeta input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 22px;
+  outline: none;
+}
+
+.login-tarjeta input:focus {
+  border-color: #e60012;
+  box-shadow: 0 0 0 2px rgba(230, 0, 18, 0.1);
+}
+
+.login-boton {
+  width: 100%;
+  padding: 15px;
+  background: #e60012;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.login-boton:hover {
+  background: #b9000e;
+}
+
+.login-mensaje {
+  color: #b9000e;
+  background: #fff0f1;
+  padding: 12px;
+  border-radius: 5px;
+  font-size: 13px;
+  line-height: 1.5;
+  margin-top: 18px;
+}
+
+.login-nota {
+  color: #999;
+  font-size: 11px;
+  text-align: center;
+  margin-top: 25px;
+}
+
+@media (max-width: 760px) {
+  .login-pagina {
+    flex-direction: column;
+  }
+
+  .login-lateral {
+    width: 100%;
+    min-height: 260px;
+    padding: 25px;
+  }
+
+  .login-marca {
+    margin: 40px 0;
+  }
+
+  .login-marca h1 {
+    font-size: 48px;
+  }
+
+  .login-descripcion,
+  .login-pie {
+    display: none;
+  }
+
+  .login-contenedor {
+    padding: 30px 18px;
+  }
+
+  .login-tarjeta {
+    padding: 28px 22px;
+  }
+}
